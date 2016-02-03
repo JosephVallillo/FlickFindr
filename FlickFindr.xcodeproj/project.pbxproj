@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D81234151C5A882C00157126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81234141C5A882C00157126 /* AppDelegate.swift */; };
-		D81234171C5A882C00157126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81234161C5A882C00157126 /* ViewController.swift */; };
 		D812341A1C5A882C00157126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81234181C5A882C00157126 /* Main.storyboard */; };
 		D812341C1C5A882C00157126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D812341B1C5A882C00157126 /* Assets.xcassets */; };
 		D812341F1C5A882C00157126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D812341D1C5A882C00157126 /* LaunchScreen.storyboard */; };
 		D812342A1C5A882D00157126 /* FlickFindrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81234291C5A882D00157126 /* FlickFindrTests.swift */; };
 		D81234351C5A882D00157126 /* FlickFindrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81234341C5A882D00157126 /* FlickFindrUITests.swift */; };
+		D81234471C5A88F600157126 /* FlickFindrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81234461C5A88F600157126 /* FlickFindrViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		D81234111C5A882C00157126 /* FlickFindr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickFindr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81234141C5A882C00157126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D81234161C5A882C00157126 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D81234191C5A882C00157126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D812341B1C5A882C00157126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D812341E1C5A882C00157126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		D81234301C5A882D00157126 /* FlickFindrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickFindrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81234341C5A882D00157126 /* FlickFindrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickFindrUITests.swift; sourceTree = "<group>"; };
 		D81234361C5A882D00157126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D81234461C5A88F600157126 /* FlickFindrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickFindrViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +97,10 @@
 		D81234131C5A882C00157126 /* FlickFindr */ = {
 			isa = PBXGroup;
 			children = (
-				D81234141C5A882C00157126 /* AppDelegate.swift */,
-				D81234161C5A882C00157126 /* ViewController.swift */,
-				D81234181C5A882C00157126 /* Main.storyboard */,
-				D812341B1C5A882C00157126 /* Assets.xcassets */,
-				D812341D1C5A882C00157126 /* LaunchScreen.storyboard */,
-				D81234201C5A882C00157126 /* Info.plist */,
+				D81234451C5A885000157126 /* Model */,
+				D81234441C5A884D00157126 /* View */,
+				D81234431C5A884C00157126 /* Controller */,
+				D81234421C5A884A00157126 /* Supporting Files */,
 			);
 			path = FlickFindr;
 			sourceTree = "<group>";
@@ -123,6 +121,40 @@
 				D81234361C5A882D00157126 /* Info.plist */,
 			);
 			path = FlickFindrUITests;
+			sourceTree = "<group>";
+		};
+		D81234421C5A884A00157126 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D812341B1C5A882C00157126 /* Assets.xcassets */,
+				D81234201C5A882C00157126 /* Info.plist */,
+				D81234141C5A882C00157126 /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D81234431C5A884C00157126 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D81234461C5A88F600157126 /* FlickFindrViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D81234441C5A884D00157126 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D81234181C5A882C00157126 /* Main.storyboard */,
+				D812341D1C5A882C00157126 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D81234451C5A885000157126 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D81234171C5A882C00157126 /* ViewController.swift in Sources */,
+				D81234471C5A88F600157126 /* FlickFindrViewController.swift in Sources */,
 				D81234151C5A882C00157126 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
